@@ -40,12 +40,10 @@ public class Main {
 
             opcao = sc.nextInt();
 
-            // finaliza
             if (opcao == 0) {
                 break;
             }
 
-            // impede repetição
             if (pacotesAdicionados.contains(opcao)) {
                 System.out.println("Esse pacote já foi adicionado!");
                 continue;
@@ -56,31 +54,31 @@ public class Main {
                 case 1:
                     assinatura = new MultiDispositivos(assinatura);
                     pacotesAdicionados.add(1);
-                    System.out.println("Pacote Multi Dispositivos adicionado!");
+                    System.out.println("Multi Dispositivos adicionado!");
                     break;
 
                 case 2:
                     assinatura = new FreteGratis(assinatura);
                     pacotesAdicionados.add(2);
-                    System.out.println("Pacote Frete Grátis adicionado!");
+                    System.out.println("Frete Grátis adicionado!");
                     break;
 
                 case 3:
                     assinatura = new CaixaSurpresa(assinatura);
                     pacotesAdicionados.add(3);
-                    System.out.println("Pacote Caixa Surpresa adicionado!");
+                    System.out.println("Caixa Surpresa adicionado!");
                     break;
 
                 case 4:
                     assinatura = new CartaoPlatinum(assinatura);
                     pacotesAdicionados.add(4);
-                    System.out.println("Pacote Cartão Platinum adicionado!");
+                    System.out.println("Cartão Platinum adicionado!");
                     break;
 
                 case 5:
                     assinatura = new CashBack(assinatura);
                     pacotesAdicionados.add(5);
-                    System.out.println("Pacote Cash Back adicionado!");
+                    System.out.println("Cash Back adicionado!");
                     break;
 
                 default:
@@ -89,8 +87,7 @@ public class Main {
 
         } while (true);
 
-        // resumo final
-        System.out.println("\n========= RESUMO DA ASSINATURA =========");
+        System.out.println("\n========= PEDIDO CONLUÍDO!!!! =========");
         System.out.println(assinatura.getDescricao());
 
         System.out.printf("\nVALOR TOTAL: R$ %.2f\n", assinatura.getPreco());
